@@ -12,6 +12,10 @@ class DDBot {
 
     void init();
 
+    void custom(int LF, int LB, int RF, int RB);
+    void custom(int LF, int LB, int RF, int RB, int PP)
+    void custom(int LF, int LB, int RF, int RB, int PL, int PR)
+
     void forward();
     void backward();
     void clockwise();

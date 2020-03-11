@@ -34,6 +34,32 @@ DDBot::DDBot (int LF, int LB, int RF, int RB, int PL, int PR){
     _PR = PL;
 }
 
+void DDBot::custom(int LF, int LB, int RF, int RB){
+    digitalWrite(_LF, LF);
+    digitalWrite(_LB, LB);
+    digitalWrite(_RF, RF);
+    digitalWrite(_RB, RB);
+}
+
+void DDBot::custom(int LF, int LB, int RF, int RB, int PP){
+    digitalWrite(_LF, LF);
+    digitalWrite(_LB, LB);
+    digitalWrite(_RF, RF);
+    digitalWrite(_RB, RB);
+
+    analogWrite(_PP, PP);
+}
+
+void DDBot::custom(int LF, int LB, int RF, int RB, int PL, int PR){
+    digitalWrite(_LF, LF);
+    digitalWrite(_LB, LB);
+    digitalWrite(_RF, RF);
+    digitalWrite(_RB, RB);
+
+    analogWrite(_PL, PL);
+    analogWrite(_PR, PR);
+}
+
 void DDBot::init (){
     pinMode(_LF, OUTPUT);
     pinMode(_LB, OUTPUT);
