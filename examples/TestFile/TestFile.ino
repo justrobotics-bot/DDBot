@@ -1,7 +1,7 @@
 /*
   Differential Drive Robot
   Built and maintained by Anuj Verma, CLAD
-  Last modified 00:32 IST 12-03-2020 AD
+  Last modified 01:42 IST 12-03-2020 AD
 
   This example was used for internal testing.
 
@@ -20,7 +20,7 @@
     3 - LB - Left backward motor pin
     4 - RF - Right forward motor pin
     5 - RB - Right backward motor pin
-    6 - PP - Power control PWM pin
+    6 - PC - Power control PWM pin
 */
 
 // Include the library into the sketch
@@ -28,13 +28,13 @@
 
 // Define the DIO and PWM pins to be used for controlling the motors
 DDBot motors (2, 3, 4, 5, 6); // Here, an instance of the class is called and it is named "motors". You can choose a different name if you wish.
-  /* Possible syntaxes
-    DDBot (int LF, int LB, int RF, int RB);
-    DDBot (int LF, int LB, int RF, int RB, int PP);
-    DDBot (int LF, int LB, int RF, int RB, int PL, int PR);
+/* Possible syntaxes
+  DDBot (int LF, int LB, int RF, int RB);
+  DDBot (int LF, int LB, int RF, int RB, int PC);
+  DDBot (int LF, int LB, int RF, int RB, int PL, int PR);
 
-    The second method above is used here.
-  */
+  The second method above is used here.
+*/
 
 // Setup code that runs only once
 void setup() {
@@ -63,9 +63,9 @@ void loop() {
 
 
   /* No power specification commands
-  These functions are commands for specific motion directions. They do not change the power parameter.
+    These functions are commands for specific motion directions. They do not change the power parameter.
 
-  Syntax:
+    Syntax:
     motors.[task]();
   */
 
@@ -116,9 +116,9 @@ void loop() {
 
 
   /* Implicit specification commands
-  These functions are commands for specific motion directions. They allow you to change the power parameter. The power is entered as percentage value (0 to 100), scaled internally from 0 to 225 for the PWM duty cycle.
+    These functions are commands for specific motion directions. They allow you to change the power parameter. The power is entered as percentage value (0 to 100), scaled internally from 0 to 225 for the PWM duty cycle.
 
-  Syntax:
+    Syntax:
     motors.[task]([power]);
   */
 
