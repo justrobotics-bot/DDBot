@@ -7,8 +7,8 @@
 class DDBot {
     public:
     DDBot (int LF, int LB, int RF, int RB);
-    DDBot (int LF, int LB, int RF, int RB, int SP);
-    DDBot (int LF, int LB, int RF, int RB, int SL, int SR);
+    DDBot (int LF, int LB, int RF, int RB, int PP);
+    DDBot (int LF, int LB, int RF, int RB, int PL, int PR);
 
     void init();
 
@@ -17,32 +17,32 @@ class DDBot {
     void clockwise();
     void counterClockwise();
     void leftF();
-    void lrftB();
+    void leftB();
     void rightF();
     void rightB();
     void stop();
 
-    void forward(int speed);
-    void backward(int speed);
-    void clockwise(int speed);
-    void counterClockwise(int speed);
-    void leftF(int speed);
-    void lrftB(int speed);
-    void rightF(int speed);
-    void rightB(int speed);
-    void stop(int speed);
+    void forward(int power);
+    void backward(int power);
+    void clockwise(int power);
+    void counterClockwise(int power);
+    void leftF(int power);
+    void leftB(int power);
+    void rightF(int power);
+    void rightB(int power);
+    void stop(int power);
 
-    void setSpeed(int speed);
-    void setSpeed(int speedL, int speedR);
+    void setPower(int power);
+    void setPower(int powerL, int powerR);
 
     private:
         int _LF;
         int _LB;
         int _RF;
         int _RB;
-        int _SP;
-        int _SL;
-        int _SR;
+        int _PP;
+        int _PL;
+        int _PR;
 };
 
 #endif

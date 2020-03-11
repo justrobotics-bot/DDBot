@@ -7,31 +7,31 @@ DDBot::DDBot (int LF, int LB, int RF, int RB){
     _RF = RF;
     _RB = RB;
 
-    _SP = 0;
-    _SL = 0;
-    _SR = 0;
+    _PP = 0;
+    _PL = 0;
+    _PR = 0;
 }
 
-DDBot::DDBot (int LF, int LB, int RF, int RB, int SP){
+DDBot::DDBot (int LF, int LB, int RF, int RB, int PP){
     _LF = LF;
     _LB = LB;
     _RF = RF;
     _RB = RB;
 
-    _SP = SP;
-    _SL = 0;
-    _SR = 0;
+    _PP = PP;
+    _PL = 0;
+    _PR = 0;
 }
 
-DDBot::DDBot (int LF, int LB, int RF, int RB, int SL, int SR){
+DDBot::DDBot (int LF, int LB, int RF, int RB, int PL, int PR){
     _LF = LF;
     _LB = LB;
     _RF = RF;
     _RB = RB;
 
-    _SP = 0;
-    _SL = SL;
-    _SR = SL;
+    _PP = 0;
+    _PL = PL;
+    _PR = PL;
 }
 
 void DDBot::init (){
@@ -40,14 +40,14 @@ void DDBot::init (){
     pinMode(_RF, OUTPUT);
     pinMode(_RB, OUTPUT);
 
-    if (!((_SP == 0) && (_SL == 0) && (SR == 0))){
-        if (!(_SP == 0)){
-            pinMode(_SP, OUTPUT);
+    if (!((_PP == 0) && (_PL == 0) && (_PR == 0))){
+        if (!(_PP == 0)){
+            pinMode(_PP, OUTPUT);
         }
 
         else {
-            pinMode(_SL, OUTPUT);
-            pinMode(_SR, OUTPUT);
+            pinMode(_PL, OUTPUT);
+            pinMode(_PR, OUTPUT);
         }
     }
 }
@@ -116,92 +116,92 @@ void DDBot::stop(){
 }
 
 
-void DDBot::forward(int speed){
+void DDBot::forward(int power){
     digitalWrite(_LF, HIGH);
     digitalWrite(_LB, LOW);
     digitalWrite(_RF, HIGH);
     digitalWrite(_RB, LOW);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::backward(int speed){
+void DDBot::backward(int power){
     digitalWrite(_LF, LOW);
     digitalWrite(_LB, HIGH);
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, HIGH);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::clockwise(int speed){
+void DDBot::clockwise(int power){
     digitalWrite(_LF, HIGH);
     digitalWrite(_LB, LOW);
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, HIGH);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::counterClockwise(int speed){
+void DDBot::counterClockwise(int power){
     digitalWrite(_LF, LOW);
     digitalWrite(_LB, HIGH);
     digitalWrite(_RF, HIGH);
     digitalWrite(_RB, LOW);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::leftF(int speed){
+void DDBot::leftF(int power){
     digitalWrite(_LF, LOW);
     digitalWrite(_LB, LOW);
     digitalWrite(_RF, HIGH);
     digitalWrite(_RB, LOW);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::leftB(int speed){
+void DDBot::leftB(int power){
     digitalWrite(_LF, LOW);
     digitalWrite(_LB, LOW);
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, HIGH);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::rightF(int speed){
+void DDBot::rightF(int power){
     digitalWrite(_LF, HIGH);
     digitalWrite(_LB, LOW);
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, LOW);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::rightB(int speed){
+void DDBot::rightB(int power){
     digitalWrite(_LF, LOW);
     digitalWrite(_LB, HIGH);
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, LOW);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::stop(int speed){
+void DDBot::stop(int power){
     digitalWrite(_LF, LOW);
     digitalWrite(_LB, LOW);
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, LOW);
 
-    setSpeed(speed);
+    setPower(power);
 }
 
-void DDBot::setSpeed(int speed){
-    analogWrite(_SP, map(speed, 0, 100, 0, 255));
+void DDBot::setPower(int power){
+    analogWrite(_PP, map(power, 0, 100, 0, 255));
 }
 
-void DDBot::setSpeed(int speedL, int speedR){
-    analogWrite(_SL, map(speedL, 0, 100, 0, 255));
-    analogWrite(_SR, map(speedR, 0, 100, 0, 255));
+void DDBot::setPower(int powerL, int powerR){
+    analogWrite(_PL, map(powerL, 0, 100, 0, 255));
+    analogWrite(_PR, map(powerR, 0, 100, 0, 255));
 }
