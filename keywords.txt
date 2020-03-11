@@ -1,0 +1,13 @@
+DDBot	KEYWORD1
+init	KEYWORD2
+custom	KEYWORD2
+forward	KEYWORD2
+backward	KEYWORD2
+clockwise	KEYWORD2
+counterClockwise	KEYWORD2
+leftF	KEYWORD2
+leftB	KEYWORD2
+rightF	KEYWORD2
+rightB	KEYWORD2
+stop	KEYWORD2
+setPower	KEYWORD2
