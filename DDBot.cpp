@@ -1,7 +1,7 @@
 /*
   Differential Drive Robot CPC
   Built and maintained by Anuj Verma, CLAD
-  Last modified 01:42 IST 12-03-2020 AD
+  Last modified 20:25 IST 12-03-2020 AD
 
   This the CPC file for a library that allows you to run a robot using an L293D driver for differential drive.
 
@@ -99,7 +99,7 @@ void DDBot::custom(uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB) {
 
 // Common power control
 // This function takes boolean values for the pin state, and an integer value for the power, as its inputs
-void DDBot::custom(uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB, uint8_t PC) {
+void DDBot::custom(uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB, long PC) {
   digitalWrite(_LF, LF);
   digitalWrite(_LB, LB);
   digitalWrite(_RF, RF);
@@ -110,7 +110,7 @@ void DDBot::custom(uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB, uint8_t PC) {
 
 // Separate power control
 // This function takes boolean values for the pin state, and integer values for the power, as its inputs
-void DDBot::custom(uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB, uint8_t PL, uint8_t PR) {
+void DDBot::custom(uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB, long PL, long PR) {
   digitalWrite(_LF, LF);
   digitalWrite(_LB, LB);
   digitalWrite(_RF, RF);
