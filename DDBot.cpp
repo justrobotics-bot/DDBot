@@ -121,7 +121,7 @@ void DDBot::custom(uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB, long PL, long
 
 
 // Initializing function
-// This sets the pinModes of the pinsthat will be used throughout the program. It uses the values of the pin numbers from the class instance to determine how many PWM pins to use for controlling power.
+// This sets the pinModes of the pins that will be used throughout the program. It uses the values of the pin numbers from the class instance to determine how many PWM pins to use for controlling power.
 void DDBot::init () {
   // Set the pinModes as OUTPUT for the DIO pins that control direction
   pinMode(_LF, OUTPUT);
