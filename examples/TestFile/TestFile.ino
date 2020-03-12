@@ -15,7 +15,7 @@
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, HIGH);
 
-  Pin connections expected in this code:
+  Pin connections expected by this code:
     2 - LF - Left forward motor pin
     3 - LB - Left backward motor pin
     4 - RF - Right forward motor pin
@@ -167,6 +167,7 @@ void loop() {
   Serial.println("Stop 50"); // Send information down the Serial line
   motors.stop(50);  // Stop the robot (at 50% power?)
   delay(4000);  // Wait for 4 s before the next action
+
 
   // This is the end of this iteration of the loop. It will now repeat.
 }

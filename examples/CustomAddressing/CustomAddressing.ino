@@ -13,7 +13,7 @@
     digitalWrite(_RF, LOW);
     digitalWrite(_RB, HIGH);
 
-  Pin connections expected in this code:
+  Pin connections expected by this code:
     2 - LF - Left forward motor pin
     3 - LB - Left backward motor pin
     4 - RF - Right forward motor pin
@@ -77,6 +77,7 @@ void loop() {
   Serial.println("0 1 1 0 50");  // Send information down the Serial line
   motors.custom(0, 1, 1, 0, 50);  // Write to digital pins
   delay(1000);  // Wait for 1 s before the next action
+
 
   // This is the end of this iteration of the loop. It will now repeat.
 }

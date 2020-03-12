@@ -3,7 +3,7 @@
   Built and maintained by Anuj Verma, CLAD
   Last modified 20:25 IST 12-03-2020 AD
 
-  This the CPC file for a library that allows you to run a robot using an L293D driver for differential drive.
+  This the CPP file for a library that allows you to run a robot using an L293D driver for differential drive.
 
   This library allows you to control the direction of movement and power supplied to the motor. Power must be entered as a percetage into the built in functions.
 
