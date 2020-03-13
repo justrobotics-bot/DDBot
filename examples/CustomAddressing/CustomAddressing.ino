@@ -1,7 +1,7 @@
 /*
   Custom Addressig
   Built and maintained by Anuj Verma, CLAD
-  Last modified 21:59 IST 12-03-2020 AD
+  Last modified 14:30 IST 13-03-2020 AD
 
   This is an example test file for a library that allows you to run a robot using an L293D driver for differential drive. This example demostrates the custom() function of the library, which allows you to send commands directly to write to the DIO pins rather than using the predefined directions. During execution, the name of the current command is sent to the Tx line of the default Serial (USB) port of the Arduino.
 
