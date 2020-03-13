@@ -43,7 +43,7 @@ void setup() {
 // Loop code that runs infinitely many times
 void loop() {
   /*  Syntax for each block
-  
+
         Serial.println("Information");
         motors.custom([values]);
         delay([value]);
@@ -68,14 +68,14 @@ void loop() {
   motors.custom(1, 0, 0, 1);  // Write to digital pins
   delay(2500);  // Wait for 1 s before the next action
 
-  // Forward at 50% power
-  Serial.println("0 0 0 0 50");  // Send information down the Serial line
-  motors.custom(0, 0, 0, 0, 50);  // Write to digital pins
+  // Forward at 75% power
+  Serial.println("0 0 0 0 75");  // Send information down the Serial line
+  motors.custom(0, 0, 0, 0, 75);  // Write to digital pins
   delay(1000);  // Wait for 1 s before the next action
 
-  // Rotate counter-clockwise at 50% power
-  Serial.println("0 1 1 0 50");  // Send information down the Serial line
-  motors.custom(0, 1, 1, 0, 50);  // Write to digital pins
+  // Rotate counter-clockwise at 75% power
+  Serial.println("0 1 1 0 75");  // Send information down the Serial line
+  motors.custom(0, 1, 1, 0, 75);  // Write to digital pins
   delay(1000);  // Wait for 1 s before the next action
 
 

@@ -79,7 +79,7 @@ DDBot::DDBot (uint8_t LF, uint8_t LB, uint8_t RF, uint8_t RB, uint8_t PL, uint8_
   // Power pins are set to -1 by default, to indicate that they are not to be used. Where they are used, the pin numbers passed into the function are transferred to global variables for the rest of the program to interact with
   _PC = -1; // Power-common
   _PL = PL; // Power-left
-  _PR = PL; // Power-right
+  _PR = PR; // Power-right
 }
 
 

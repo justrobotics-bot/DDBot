@@ -122,50 +122,50 @@ void loop() {
     motors.[task]([power]);
   */
 
-  // Move forward at 50% power (1 0 1 0)
-  Serial.println("Forward 50"); // Send information down the Serial line
-  motors.forward(50); // Write to digital pins to move the robot forward at 50% power
+  // Move forward at 75% power (1 0 1 0)
+  Serial.println("Forward 75"); // Send information down the Serial line
+  motors.forward(75); // Write to digital pins to move the robot forward at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Move backward at 50% power (0 1 0 1)
-  Serial.println("Backward 50"); // Send information down the Serial line
-  motors.backward(50); // Write to digital pins to move the robot backward at 50% power
+  // Move backward at 75% power (0 1 0 1)
+  Serial.println("Backward 75"); // Send information down the Serial line
+  motors.backward(75); // Write to digital pins to move the robot backward at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Rotate clockwise at 50% power (1 0 0 1)
-  Serial.println("Cloclwise 50");  // Send information down the Serial line
-  motors.clockwise(50); // Write to digital pins to rotate the robot clockwise at 50% power
+  // Rotate clockwise at 75% power (1 0 0 1)
+  Serial.println("Cloclwise 75");  // Send information down the Serial line
+  motors.clockwise(75); // Write to digital pins to rotate the robot clockwise at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Rotate counter-clockwise at 50% power (0 1 1 0)
-  Serial.println("Counter-clockwise 50");  // Send information down the Serial line
-  motors.counterClockwise(50);  // Write to digital pins to rotate the robot counter-clockwise at 50% power
+  // Rotate counter-clockwise at 75% power (0 1 1 0)
+  Serial.println("Counter-clockwise 75");  // Send information down the Serial line
+  motors.counterClockwise(75);  // Write to digital pins to rotate the robot counter-clockwise at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Move forward, curving left at 50% power (0 0 1 0)
-  Serial.println("Left Forward 50"); // Send information down the Serial line
-  motors.leftF(50); // Write to digital pins to move the robot forward, curving left at 50% power
+  // Move forward, curving left at 75% power (0 0 1 0)
+  Serial.println("Left Forward 75"); // Send information down the Serial line
+  motors.leftF(75); // Write to digital pins to move the robot forward, curving left at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Move backward, curving left at 50% power (0 0 0 1)
-  Serial.println("Left Backward 50");  // Send information down the Serial line
-  motors.leftB(50); // Write to digital pins to move the robot backward, curving left at 50% power
+  // Move backward, curving left at 75% power (0 0 0 1)
+  Serial.println("Left Backward 75");  // Send information down the Serial line
+  motors.leftB(75); // Write to digital pins to move the robot backward, curving left at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Move forward, curving right at 50% power (1 0 0 0)
-  Serial.println("Right Forward 50");  // Send information down the Serial line
-  motors.rightF(50);  // Write to digital pins to move the robot forward, curving right at 50% power
+  // Move forward, curving right at 75% power (1 0 0 0)
+  Serial.println("Right Forward 75");  // Send information down the Serial line
+  motors.rightF(75);  // Write to digital pins to move the robot forward, curving right at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Move backward, curving right at 50% power (0 1 0 0)
-  Serial.println("Right Backward 50"); // Send information down the Serial line
-  motors.rightB(50);  // Write to digital pins to move the robot backward, curving right at 50% power
+  // Move backward, curving right at 75% power (0 1 0 0)
+  Serial.println("Right Backward 75"); // Send information down the Serial line
+  motors.rightB(75);  // Write to digital pins to move the robot backward, curving right at 75% power
   delay(2500);  // Wait for 2.5 s before the next action
 
-  // Stop moving (at 50% power?) (0 0 0 0)
+  // Stop moving (at 75% power?) (0 0 0 0)
   // Although power will be immaterial when the robot is not moving, the library allows you to specify it for the sake of consistency.
-  Serial.println("Stop 50"); // Send information down the Serial line
-  motors.stop(50);  // Stop the robot (at 50% power?)
+  Serial.println("Stop 75"); // Send information down the Serial line
+  motors.stop(75);  // Stop the robot (at 75% power?)
   delay(4000);  // Wait for 4 s before the next action
 
 
