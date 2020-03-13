@@ -5,11 +5,18 @@
 
   This example was used for internal testing.
 
-  This is an example test file for a library that allows you to run a robot using an L293D driver for differential drive. This example demostrates all the directions that are pre-defined in the library. It also demonstrates two ways to set the power given to the motors: sepcifying it explicitly using the setPower(int power) function, and sepcifying it within the function that commands the robot to move in a particular direction. During execution, the name of the current command is sent to the Tx line of the default Serial (USB) port of the Arduino.
+  This is an example test file for a library that allows you to run a robot using an L293D driver for
+  differential drive. This example demostrates all the directions that are pre-defined in the library. It also
+  demonstrates two ways to set the power given to the motors: sepcifying it explicitly using the setPower(int
+  power) function, and sepcifying it within the function that commands the robot to move in a particular
+  direction. During execution, the name of the current command is sent to the Tx line of the default Serial
+  (USB) port of the Arduino.
 
-  Only one PWM pin is used in this example to control the power to the motors, presumably common to the left and right motors.
+  Only one PWM pin is used in this example to control the power to the motors, presumably common to the left
+  and right motors.
 
-  The raw values used for digitalWrite() are indicated alongside each action in order of the DIO pin: (LF LB RF RB). For example, the code for rotating clockwise (1 0 0 1) corresponds to
+  The raw values used for digitalWrite() are indicated alongside each action in order of the DIO pin: (LF LB
+  RF RB). For example, the code for rotating clockwise (1 0 0 1) corresponds to
     digitalWrite(_LF, HIGH);
     digitalWrite(_LB, LOW);
     digitalWrite(_RF, LOW);
@@ -27,7 +34,8 @@
 #include <DDBot.h>
 
 // Define the DIO and PWM pins to be used for controlling the motors
-DDBot motors (2, 3, 4, 5, 6); // Here, an instance of the class is called and it is named "motors". You can choose a different name if you wish.
+DDBot motors (2, 3, 4, 5, 6); // Here, an instance of the class is called and it is named "motors". You can
+// choose a different name if you wish.
 /* Possible syntaxes
   DDBot (int LF, int LB, int RF, int RB);
   DDBot (int LF, int LB, int RF, int RB, int PC);
@@ -52,13 +60,15 @@ void loop() {
         delay([value]);
 
       The first line sends the name of the task down the Serial line.
-      The second line calls the function in the library. Here we only specify the common power value in these functions.
+      The second line calls the function in the library. Here we only specify the common power value in these
+      functions.
       The last is a delay in milliseconds to make the task last long enough to be observable.
   */
 
   // Set power to 100% (full)
   Serial.println("Power: 100"); // Send information down the Serial line
-  motors.setPower(100); // Write to PWM pins to set the power to 100%. The entered percentage value is internally scaled from 0 to 225 for the PWM duty cycle.
+  motors.setPower(100); // Write to PWM pins to set the power to 100%. The entered percentage value is
+  // internally scaled from 0 to 225 for the PWM duty cycle.
   delay(1000);  // Wait for 1 s before the next action
 
 
@@ -116,7 +126,9 @@ void loop() {
 
 
   /* Implicit specification commands
-    These functions are commands for specific motion directions. They allow you to change the power parameter. The power is entered as percentage value (0 to 100), scaled internally from 0 to 225 for the PWM duty cycle.
+    These functions are commands for specific motion directions. They allow you to change the power parameter.
+    The power is entered as percentage value (0 to 100), scaled internally from 0 to 225 for the PWM duty
+    cycle.
 
     Syntax:
     motors.[task]([power]);
@@ -163,7 +175,8 @@ void loop() {
   delay(2500);  // Wait for 2.5 s before the next action
 
   // Stop moving (at 75% power?) (0 0 0 0)
-  // Although power will be immaterial when the robot is not moving, the library allows you to specify it for the sake of consistency.
+  // Although power will be immaterial when the robot is not moving, the library allows you to specify it for
+  // the sake of consistency.
   Serial.println("Stop 75"); // Send information down the Serial line
   motors.stop(75);  // Stop the robot (at 75% power?)
   delay(4000);  // Wait for 4 s before the next action
