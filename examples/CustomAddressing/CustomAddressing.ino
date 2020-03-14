@@ -1,7 +1,7 @@
 /*
   Custom Addressig
   Built and maintained by Anuj Verma, CLAD
-  Last modified 14:30 IST 13-03-2020 AD
+  Last modified 20:00 IST 14-03-2020 AD
 
   This is an example test file for a library that allows you to run a robot using an L293D driver for
   differential drive. This example demostrates the custom() function of the library, which allows you to send
@@ -61,6 +61,9 @@ void loop() {
       or 0, to write to the digital pin.
       The last is a delay in milliseconds to make the task last long enough to be observable.
   */
+
+  // Set the power to 100%
+  motors.setPower(100);
 
   // Stopped
   Serial.println("0 0 0 0");  // Send information down the Serial line
