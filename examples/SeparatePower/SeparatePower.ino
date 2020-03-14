@@ -31,7 +31,7 @@
 
 // Define the DIO and PWM pins to be used for controlling the motors
 DDBot motors (2, 3, 4, 5, 10, 11); // Here, an instance of the class is called and it is named "motors". You
-can choose a different name if you wish.
+// can choose a different name if you wish.
 /* Possible syntaxes
   DDBot (int LF, int LB, int RF, int RB);
   DDBot (int LF, int LB, int RF, int RB, int PC);
@@ -51,7 +51,7 @@ void loop() {
   /*  Syntax for setPower()
       You can specify the power that must be given to the motors, as a percentage (0 to 100), internally
       scaled from 0 to 255 for the PWM duty cycle.
-      
+
       If you specify only one value in the arguments like this
         setPower(62);
       the program assumes that you have specified only one pin (PC) for power, presumably common to both
@@ -67,7 +67,7 @@ void loop() {
   // Of course, the robot should not start moving at this point because the power is 0%.
   motors.setPower(0, 0);  // Set both motors to 0% power
   motors.forward(); // Set the motors to move forward
-  
+
 
   // Gradually turn up the power for the left motor to 100%.
   for (int powerL = 0; powerL < 100; powerL++){  // Initialize a for loop that increments the value of
@@ -97,7 +97,7 @@ void loop() {
   // Of course, the robot should not start moving at this point because the power is 0%.
   motors.setPower(0, 0);  // Set both motors to 0% power
   motors.backward(); // Set the motors to move backward
-  
+
   // Gradually turn up the power for the left motor to 100%.
   for (int powerL = 0; powerL < 100; powerL++){  // Initialize a for loop that increments the value of
   // "powerL" until it reaches 100%.
