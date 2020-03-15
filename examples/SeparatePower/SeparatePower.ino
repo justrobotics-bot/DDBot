@@ -1,5 +1,5 @@
 /*
-  Custom Addressig
+  Separate Power
   Built and maintained by Anuj Verma, CLAD
   Last modified 23:44 IST 12-03-2020 AD
 
