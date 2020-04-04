@@ -30,8 +30,7 @@
 #include <DDBot.h>
 
 // Define the DIO and PWM pins to be used for controlling the motors
-DDBot motors (2, 3, 4, 5, 6); // Here, an instance of the class is called and it is named "motors". You can
-choose a different name if you wish.
+DDBot motors (2, 3, 4, 5, 6); // Here, an instance of the class is called and it is named "motors". You can choose a different name if you wish.
 /* Possible syntaxes
   DDBot (int LF, int LB, int RF, int RB);
   DDBot (int LF, int LB, int RF, int RB, int PC);
